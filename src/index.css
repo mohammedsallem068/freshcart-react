@@ -1,0 +1,104 @@
+
+@import 'tailwindcss';
+
+body{
+    background-image: url(./assets/img/imgi_52_light-patten-DfaqEfwF.svg);
+    font-family: "Inter", sans-serif;
+}
+button{
+
+  @apply cursor-pointer
+}
+.active{
+
+     @apply rounded bg-green-500 text-white py-2 px-4
+}
+
+li{
+
+  list-style: none;
+}
+
+.btn{
+
+    @apply bg-green-500  text-white p-1  md:py-2 md:px-2 hover:bg-green-600 rounded
+}
+
+.btn-proudct{
+   transform: translateY(100%);
+   opacity: 0;
+   transition: transform 0.6s ease-in-out ;
+}
+
+.proudct:hover .btn-proudct{
+
+   transform: translateY(0%);
+   opacity: 1;
+}
+
+.proudct:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+.proudct {
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.b-footer{
+
+    @apply border-b-2 border-gray-300 border-t-2 p-5
+}
+.row{
+
+    @apply flex flex-wrap items-center 
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #4ade80; 
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e; 
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.big {
+  width: 100%;
+  height:400px ;
+  object-fit: cover;
+
+}
+
+.small-container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.small {
+  width: 100%;
+  height:200px;
+  object-fit: cover;
+  
+}
+
