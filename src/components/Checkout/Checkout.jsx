@@ -39,11 +39,6 @@ export default function Checkout() {
           }, 2000);
         }
 
-
-
-
-
-
       })
 
   }

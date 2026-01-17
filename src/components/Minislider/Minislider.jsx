@@ -34,7 +34,7 @@ export default function Minislider() {
             <div className='flex '  >
               <div className="w-3/4">
                   <Slider {...settings}>
-                       <img src={slide2}  className='w-full h-[300px] md:h-[400px]'  />
+                       <img src={slide2}   className='w-full h-[300px] md:h-[400px]'  />
                        <img src={slide3}  className='w-full h-[300px] md:h-[400px]'  />
                        <img src={slide4}  className='w-full h-[300px] md:h-[400px]'  />
 
@@ -43,7 +43,7 @@ export default function Minislider() {
               <div className="w-1/4">
 
                   <img src={slide5}  className='w-full h-[150px] object-fill md:h-[200px]'  />
-                  <img src={slide6}  className='w-full h-[150px] object-fill md:h-[200px]'  />
+                  <img src={slide6}   className='w-full h-[150px] object-fill md:h-[200px]'  />
 
 
               </div>
