@@ -75,7 +75,7 @@ export default function Navbar() {
                   </span>
                 </Link>
               </li>
-              <li className="ms-2 text-gray-700">
+              <li className=" md:ms-2 text-gray-700">
                 <Link to="cart" className="relative">
                   <i className="fa-solid fa-cart-shopping  fa-xl"></i>
                   <span className="absolute -top-2 -left-1 bg-green-500 text-white  w-5 h-5 flex items-center justify-center text-xs rounded-full">
@@ -83,7 +83,8 @@ export default function Navbar() {
                   </span>
                 </Link>
               </li>
-              <li onClick={logout} className='btn m-2'> Log out </li>
+              <li onClick={logout} className='bg-green-500 text-sm p-1  text-white  m-1  md:py-2 md:px-2 hover:bg-green-600 rounded
+}'> Log out </li>
 
             </>}
 

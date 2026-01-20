@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { jwtDecode } from "jwt-decode";
 import Style from './Orders.module.css'
 import axios from 'axios';
@@ -7,8 +7,8 @@ import { Meta, Title } from 'react-head';
 
 
 
-export default function Orders() {
 
+export default function Orders() {
 
 
   let token = localStorage.getItem('usertoken');
@@ -75,7 +75,7 @@ export default function Orders() {
             </div>
             <div className="row">
               {order?.cartItems?.map((product) =>
-                <div key={product._id}  className='lg:w-1/6 md:w-1/3 p-3 '>
+                <div key={product._id} className='lg:w-1/6 md:w-1/3 p-3 '>
                   <div className="proudct p-2">
                     <img className='contain' src={product?.product?.imageCover} alt={product?.product?.title} />
                     <p>{product?.product?.title.split(' ').slice(0, 2).join(' ')}</p>

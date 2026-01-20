@@ -15,7 +15,7 @@ export default function Categerios() {
     setSpinnerload(true)
     axios.get(`https://ecommerce.routemisr.com/api/v1/categories`)
       .then(({ data }) => {
-        console.log(data.data);
+        
 
         setCategories(data?.data);
         setSpinnerload(false)
