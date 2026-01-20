@@ -46,7 +46,7 @@ export default function Navbar() {
                 <NavLink to='' >Home</NavLink>
               </li>
               <li className='px-2   text-gray-700 '>
-                <NavLink to='product' >Product youssef</NavLink>
+                <NavLink to='product' >Product </NavLink>
               </li>
               <li className='px-2   text-gray-700 '>
                 <NavLink to='categerios' >Categerios</NavLink>
