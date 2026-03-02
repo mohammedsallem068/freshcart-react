@@ -11,7 +11,7 @@ export default function Brand() {
   const [selctedbrand, setselctedBrand] = useState(null);
 
   function getbrands() {
-    setSpinnerload(true)
+  
     axios.get(`https://ecommerce.routemisr.com/api/v1/brands`)
       .then(({ data }) => {
         setallBrand(data.data)
