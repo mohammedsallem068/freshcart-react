@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import Style from './Categerios.module.css'
 import axios from 'axios';
-import Spinner from '../Spinner/Spinner';
+
 import { Meta, Title } from 'react-head';
 
 export default function Categerios() {
 
   const [categorie, setCategories] = useState([]);
-  const [Spinnerload, setSpinnerload] = useState(true);
   const [Selctedcategerios, setSelctedcategerios] = useState(null);
 
 
   function getCategerios() {
-    setSpinnerload(true)
+    
     axios.get(`https://ecommerce.routemisr.com/api/v1/categories`)
       .then(({ data }) => {
         
 
         setCategories(data?.data);
-        setSpinnerload(false)
+        
       })
   }
 
@@ -40,7 +39,7 @@ export default function Categerios() {
       <Title> categerios</Title>
       <Meta name="description" content="welcome to categerios page" />
 
-      {Spinnerload ? <Spinner></Spinner> :
+      
         <section className='py-6'>
           <div className="container py-10">
             <h1 className='text-gray-600 p-3 text-xl'>Featured Categories</h1>
@@ -101,7 +100,7 @@ export default function Categerios() {
             </div>
           </div>
         </section>
-      }
+      
 
     </>
   )

@@ -65,11 +65,11 @@ export default function ProudctDetails() {
 
   async function AddProudct(productId) {
     setcurrentProudctId(productId)
-    setloading(true)
+  
 
     let response = await AddProudctToCart(productId);
     if (response?.data?.status === "success") {
-      setloading(false)
+      
       setcart(response.data)
 
       toast.success(response?.data?.message, {
@@ -77,10 +77,9 @@ export default function ProudctDetails() {
         position: 'top-right',
       })
     }
-    else {
-      setloading(false)
+    
 
-    }
+    
 
   }
 
@@ -89,18 +88,18 @@ export default function ProudctDetails() {
 
 
   function getProudct() {
-    setSpinnerload(true)
+    
 
     axios.get(`https://ecommerce.routemisr.com/api/v1/products`)
       .then(({ data }) => {
         setProudct(data.data);
-        setSpinnerload(false)
+        
 
 
 
       })
       .catch(() => {
-        setSpinnerload(false)
+        
 
       })
   }
@@ -109,9 +108,6 @@ export default function ProudctDetails() {
     getwishProduct()
   }, []);
 
-  if (Spinnerload) {
-    return <Spinner></Spinner>
-  }
   return (
     <>
 

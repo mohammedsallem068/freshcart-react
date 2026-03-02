@@ -23,14 +23,14 @@ export default function SpecialProudct() {
   let { AddProudctToCart, setcart } = useContext(CartContect);
   let { Token } = useContext(TokenContext);
   let navigate = useNavigate()
-  const [loading, setloading] = useState(true);
+  
   const [currentProudctId, setcurrentProudctId] = useState(null);
   async function AddProudct(productId) {
     setcurrentProudctId(productId)
     setloading(true)
     let response = await AddProudctToCart(productId);
     if (response?.data?.status === "success" && Token !== null) {
-      setloading(false)
+    
       setcart(response.data)
       toast.success(response?.data?.message, {
         duration: 2000,
@@ -38,7 +38,7 @@ export default function SpecialProudct() {
       })
     }
     else {
-      setloading(false)
+      
       navigate('/login')
     }
 
@@ -105,7 +105,7 @@ export default function SpecialProudct() {
       <Title> {specialProudct?.title} </Title>
       <Meta name="description" content={specialProudct?.description} />
 
-      {Spinnerload ? <Spinner></Spinner> :
+      
         <section className='py-6'>
           <div className='container mx-auto'>
             <div className='row'>
@@ -194,7 +194,7 @@ export default function SpecialProudct() {
 
 
 
-      }
+      
 
     </>
   )

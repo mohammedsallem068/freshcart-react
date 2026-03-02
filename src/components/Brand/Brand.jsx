@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Style from './Brand.module.css'
 import axios from 'axios';
-import Spinner from '../Spinner/Spinner';
+
 import { Meta, Title } from 'react-head';
 
 export default function Brand() {
 
-  const [Spinnerload, setSpinnerload] = useState(true);
+  
   const [brands, setallBrand] = useState([]);
   const [selctedbrand, setselctedBrand] = useState(null);
 
@@ -15,7 +15,7 @@ export default function Brand() {
     axios.get(`https://ecommerce.routemisr.com/api/v1/brands`)
       .then(({ data }) => {
         setallBrand(data.data)
-        setSpinnerload(false)
+        
 
 
       })
@@ -33,9 +33,7 @@ export default function Brand() {
     getbrands()
 
   }, []);
-  if (Spinnerload) {
-    return <Spinner></Spinner>
-  }
+ 
   return (
 
     <>
